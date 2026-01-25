@@ -10,8 +10,6 @@ import org.powernukkitx.simpleworldedit.manager.SWEPlayer;
 import org.powernukkitx.simpleworldedit.utils.PlayerManager;
 import org.powernukkitx.simpleworldedit.utils.Selection;
 
-import java.util.Map;
-
 public class CopyCommand extends PluginCommand<SimpleWorldEdit> {
 
     public CopyCommand() {

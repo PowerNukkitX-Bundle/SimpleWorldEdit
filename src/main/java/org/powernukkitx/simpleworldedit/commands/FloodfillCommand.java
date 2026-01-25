@@ -11,15 +11,11 @@ import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.command.tree.ParamList;
 import cn.nukkit.command.utils.CommandLogger;
 import cn.nukkit.level.Level;
-import cn.nukkit.level.Position;
 import cn.nukkit.level.generator.object.BlockManager;
 import org.powernukkitx.simpleworldedit.SimpleWorldEdit;
-import org.powernukkitx.simpleworldedit.clipboard.Clipboard;
-import org.powernukkitx.simpleworldedit.clipboard.ClipboardEntry;
 import org.powernukkitx.simpleworldedit.history.History;
 import org.powernukkitx.simpleworldedit.manager.SWEPlayer;
 import org.powernukkitx.simpleworldedit.utils.PlayerManager;
-import org.powernukkitx.simpleworldedit.utils.StringFormat;
 
 import java.util.*;
 
