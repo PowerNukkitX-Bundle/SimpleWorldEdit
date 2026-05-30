@@ -5,22 +5,24 @@ import cn.nukkit.block.BlockStructureVoid;
 import cn.nukkit.level.structure.Structure;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.nbt.tag.CompoundTag;
-import cn.nukkit.network.protocol.types.Rotation;
-import lombok.RequiredArgsConstructor;
+import cn.nukkit.utils.StructureRotationUtil;
+import org.cloudburstmc.protocol.bedrock.data.structure.Rotation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-@RequiredArgsConstructor
 public class ClipboardEntry {
 
     private static final BlockState VOID = BlockStructureVoid.PROPERTIES.getDefaultState();
 
     private float rotationXZ;
     private final Structure structure;
+
+    public ClipboardEntry(Structure structure) {
+        this.structure = structure;
+    }
 
     public void rotate(float rotation) {
         this.rotationXZ += rotation;
@@ -103,9 +105,9 @@ public class ClipboardEntry {
                             continue;
 
                         BlockState rotatedState = switch (rotation) {
-                            case ROTATE_90 -> Rotation.clockwise90(original);
-                            case ROTATE_180 -> Rotation.clockwise180(original);
-                            case ROTATE_270 -> Rotation.counterclockwise90(original);
+                            case ROTATE_90 -> StructureRotationUtil.clockwise90(original);
+                            case ROTATE_180 -> StructureRotationUtil.clockwise180(original);
+                            case ROTATE_270 -> StructureRotationUtil.counterclockwise90(original);
                             default -> original;
                         };
 

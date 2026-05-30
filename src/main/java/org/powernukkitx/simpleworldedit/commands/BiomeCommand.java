@@ -8,7 +8,6 @@ import cn.nukkit.command.tree.ParamList;
 import cn.nukkit.command.utils.CommandLogger;
 import cn.nukkit.level.Level;
 import cn.nukkit.level.format.IChunk;
-import cn.nukkit.network.protocol.types.biome.BiomeDefinition;
 import cn.nukkit.registry.Registries;
 import it.unimi.dsi.fastutil.objects.ObjectArraySet;
 import org.powernukkitx.simpleworldedit.SimpleWorldEdit;
@@ -16,7 +15,9 @@ import org.powernukkitx.simpleworldedit.manager.SWEPlayer;
 import org.powernukkitx.simpleworldedit.utils.PlayerManager;
 import org.powernukkitx.simpleworldedit.utils.Selection;
 
+import java.util.Arrays;
 import java.util.Map;
+import java.util.Objects;
 
 public class BiomeCommand extends PluginCommand<SimpleWorldEdit> {
 
@@ -25,8 +26,17 @@ public class BiomeCommand extends PluginCommand<SimpleWorldEdit> {
         this.setPermission("simpleworldedit.command.biome");
         this.setDescription("Changes the biome in your selection.");
         this.commandParameters.clear();
+        String[] biomeNames = Registries.BIOME.getBiomeDefinitions().stream()
+                .map(definition -> Registries.BIOME.getFromBiomeStringList(definition.left()))
+                .filter(Objects::nonNull)
+                .filter(name -> !name.isBlank())
+                .distinct()
+                .toArray(String[]::new);
+        Arrays.sort(biomeNames);
         this.commandParameters.put("default", new CommandParameter[]{
-                CommandParameter.newEnum("biomes", false, Registries.BIOME.getBiomeDefinitions().stream().map(BiomeDefinition::getName).toArray(String[]::new))
+                biomeNames.length == 0
+                        ? CommandParameter.newType("biome", false, org.cloudburstmc.protocol.bedrock.data.command.CommandParamType.RAW_TEXT)
+                        : CommandParameter.newEnum("biome", false, biomeNames)
         });
         this.enableParamTree();
     }

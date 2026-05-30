@@ -1,11 +1,8 @@
 package org.powernukkitx.simpleworldedit.clipboard;
 
-import lombok.RequiredArgsConstructor;
-
 import java.util.ArrayList;
 import java.util.List;
 
-@RequiredArgsConstructor
 public class Clipboard {
 
     public static Integer CLIPBOARD_SIZE = 32;

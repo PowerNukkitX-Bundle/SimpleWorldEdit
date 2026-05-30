@@ -1,6 +1,6 @@
 name: SimpleWorldEdit
 version: 1.0.0
-api: 2.0.0
+api: 3.0.0
 authors: [Buddelbubi]
 description: Simple WorldEdit plugin for PNX
 main: org.powernukkitx.simpleworldedit.SimpleWorldEdit

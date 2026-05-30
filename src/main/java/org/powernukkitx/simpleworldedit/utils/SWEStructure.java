@@ -4,7 +4,8 @@ import cn.nukkit.block.BlockState;
 import cn.nukkit.level.structure.Structure;
 import cn.nukkit.math.Vector3;
 import cn.nukkit.nbt.tag.CompoundTag;
-import cn.nukkit.network.protocol.types.Rotation;
+import cn.nukkit.utils.StructureRotationUtil;
+import org.cloudburstmc.protocol.bedrock.data.structure.Rotation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -117,9 +118,9 @@ public class SWEStructure extends Structure {
 
     protected BlockState rotate(Rotation rotation, BlockState state) {
         return switch (rotation) {
-            case ROTATE_90 -> Rotation.clockwise90(state);
-            case ROTATE_180 -> Rotation.clockwise180(state);
-            case ROTATE_270 -> Rotation.counterclockwise90(state);
+            case ROTATE_90 -> StructureRotationUtil.clockwise90(state);
+            case ROTATE_180 -> StructureRotationUtil.clockwise180(state);
+            case ROTATE_270 -> StructureRotationUtil.counterclockwise90(state);
             default -> state;
         };
     }

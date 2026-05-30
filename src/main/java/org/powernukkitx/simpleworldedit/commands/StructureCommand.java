@@ -3,12 +3,12 @@ package org.powernukkitx.simpleworldedit.commands;
 import cn.nukkit.Player;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.command.PluginCommand;
-import cn.nukkit.command.data.CommandParamType;
 import cn.nukkit.command.data.CommandParameter;
 import cn.nukkit.command.tree.ParamList;
 import cn.nukkit.command.utils.CommandLogger;
 import cn.nukkit.level.structure.Structure;
 import cn.nukkit.level.structure.StructureAPI;
+import org.cloudburstmc.protocol.bedrock.data.command.CommandParamType;
 import org.powernukkitx.simpleworldedit.SimpleWorldEdit;
 import org.powernukkitx.simpleworldedit.clipboard.Clipboard;
 import org.powernukkitx.simpleworldedit.clipboard.ClipboardEntry;
@@ -26,7 +26,7 @@ public class StructureCommand extends PluginCommand<SimpleWorldEdit> {
         this.commandParameters.clear();
         this.commandParameters.put("default", new CommandParameter[]{
                 CommandParameter.newEnum("operation", false, new String[]{"save", "load"}),
-                CommandParameter.newType("structure", false, CommandParamType.STRING)
+                CommandParameter.newType("structure", false, CommandParamType.RAW_TEXT)
         });
         this.enableParamTree();
     }
