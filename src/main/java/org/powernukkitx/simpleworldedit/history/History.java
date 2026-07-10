@@ -1,7 +1,7 @@
 package org.powernukkitx.simpleworldedit.history;
 
-import cn.nukkit.block.Block;
-import cn.nukkit.level.generator.object.BlockManager;
+import org.powernukkitx.block.Block;
+import org.powernukkitx.level.generator.object.BlockManager;
 
 import java.util.ArrayList;
 import java.util.List;

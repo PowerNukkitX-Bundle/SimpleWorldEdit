@@ -1,13 +1,13 @@
 package org.powernukkitx.simpleworldedit.commands;
 
-import cn.nukkit.Player;
-import cn.nukkit.command.CommandSender;
-import cn.nukkit.command.PluginCommand;
-import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.command.tree.ParamList;
-import cn.nukkit.command.utils.CommandLogger;
-import cn.nukkit.level.DimensionData;
-import cn.nukkit.math.SimpleAxisAlignedBB;
+import org.powernukkitx.Player;
+import org.powernukkitx.command.CommandSender;
+import org.powernukkitx.command.PluginCommand;
+import org.powernukkitx.command.data.CommandParameter;
+import org.powernukkitx.command.tree.ParamList;
+import org.powernukkitx.command.utils.CommandLogger;
+import org.powernukkitx.level.DimensionData;
+import org.powernukkitx.math.SimpleAxisAlignedBB;
 import org.cloudburstmc.protocol.bedrock.data.command.CommandParamType;
 import org.powernukkitx.simpleworldedit.SimpleWorldEdit;
 import org.powernukkitx.simpleworldedit.manager.SWEPlayer;

@@ -1,9 +1,9 @@
 package org.powernukkitx.simpleworldedit.commands;
 
-import cn.nukkit.Player;
-import cn.nukkit.command.CommandSender;
-import cn.nukkit.command.PluginCommand;
-import cn.nukkit.level.structure.Structure;
+import org.powernukkitx.Player;
+import org.powernukkitx.command.CommandSender;
+import org.powernukkitx.command.PluginCommand;
+import org.powernukkitx.level.structure.Structure;
 import org.powernukkitx.simpleworldedit.SimpleWorldEdit;
 import org.powernukkitx.simpleworldedit.clipboard.ClipboardEntry;
 import org.powernukkitx.simpleworldedit.manager.SWEPlayer;

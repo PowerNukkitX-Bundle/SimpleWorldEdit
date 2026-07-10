@@ -1,11 +1,11 @@
 package org.powernukkitx.simpleworldedit.utils;
 
-import cn.nukkit.Player;
-import cn.nukkit.event.EventHandler;
-import cn.nukkit.event.Listener;
-import cn.nukkit.event.entity.EntityLevelChangeEvent;
-import cn.nukkit.event.player.PlayerJoinEvent;
-import cn.nukkit.event.player.PlayerQuitEvent;
+import org.powernukkitx.Player;
+import org.powernukkitx.event.EventHandler;
+import org.powernukkitx.event.Listener;
+import org.powernukkitx.event.entity.EntityLevelChangeEvent;
+import org.powernukkitx.event.player.PlayerJoinEvent;
+import org.powernukkitx.event.player.PlayerQuitEvent;
 import org.powernukkitx.simpleworldedit.manager.SWEPlayer;
 
 import java.util.HashMap;

@@ -1,8 +1,8 @@
 package org.powernukkitx.simpleworldedit.utils;
 
-import cn.nukkit.math.AxisAlignedBB;
-import cn.nukkit.math.BlockVector3;
-import cn.nukkit.math.SimpleAxisAlignedBB;
+import org.powernukkitx.math.AxisAlignedBB;
+import org.powernukkitx.math.BlockVector3;
+import org.powernukkitx.math.SimpleAxisAlignedBB;
 
 public class Selection {
 

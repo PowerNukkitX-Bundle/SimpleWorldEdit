@@ -1,6 +1,6 @@
 package org.powernukkitx.simpleworldedit.manager;
 
-import cn.nukkit.Player;
+import org.powernukkitx.Player;
 import org.powernukkitx.simpleworldedit.clipboard.Clipboard;
 import org.powernukkitx.simpleworldedit.history.History;
 import org.powernukkitx.simpleworldedit.utils.Selection;

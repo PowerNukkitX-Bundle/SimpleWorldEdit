@@ -1,10 +1,10 @@
 package org.powernukkitx.simpleworldedit.listener;
 
-import cn.nukkit.Player;
-import cn.nukkit.Server;
-import cn.nukkit.event.EventHandler;
-import cn.nukkit.event.Listener;
-import cn.nukkit.event.player.PlayerCommandPreprocessEvent;
+import org.powernukkitx.Player;
+import org.powernukkitx.Server;
+import org.powernukkitx.event.EventHandler;
+import org.powernukkitx.event.Listener;
+import org.powernukkitx.event.player.PlayerCommandPreprocessEvent;
 
 public class CommandAliasListener implements Listener {
 

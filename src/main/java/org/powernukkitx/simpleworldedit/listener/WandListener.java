@@ -1,12 +1,12 @@
 package org.powernukkitx.simpleworldedit.listener;
 
-import cn.nukkit.Player;
-import cn.nukkit.event.EventHandler;
-import cn.nukkit.event.Listener;
-import cn.nukkit.event.block.BlockBreakEvent;
-import cn.nukkit.event.player.PlayerInteractEvent;
-import cn.nukkit.item.ItemWoodenAxe;
-import cn.nukkit.math.BlockVector3;
+import org.powernukkitx.Player;
+import org.powernukkitx.event.EventHandler;
+import org.powernukkitx.event.Listener;
+import org.powernukkitx.event.block.BlockBreakEvent;
+import org.powernukkitx.event.player.PlayerInteractEvent;
+import org.powernukkitx.item.ItemWoodenAxe;
+import org.powernukkitx.math.BlockVector3;
 import org.powernukkitx.simpleworldedit.manager.SWEPlayer;
 import org.powernukkitx.simpleworldedit.utils.PlayerManager;
 import org.powernukkitx.simpleworldedit.utils.StringFormat;

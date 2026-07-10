@@ -1,6 +1,6 @@
 package org.powernukkitx.simpleworldedit.utils;
 
-import cn.nukkit.math.BlockVector3;
+import org.powernukkitx.math.BlockVector3;
 
 public class StringFormat {
 

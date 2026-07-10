@@ -1,8 +1,8 @@
 package org.powernukkitx.simpleworldedit;
 
-import cn.nukkit.command.CommandMap;
-import cn.nukkit.plugin.PluginBase;
-import cn.nukkit.plugin.PluginManager;
+import org.powernukkitx.command.CommandMap;
+import org.powernukkitx.plugin.PluginBase;
+import org.powernukkitx.plugin.PluginManager;
 import org.powernukkitx.simpleworldedit.commands.*;
 import org.powernukkitx.simpleworldedit.listener.CommandAliasListener;
 import org.powernukkitx.simpleworldedit.listener.WandListener;

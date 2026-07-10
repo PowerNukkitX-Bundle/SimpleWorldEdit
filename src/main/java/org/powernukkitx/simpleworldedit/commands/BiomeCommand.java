@@ -1,14 +1,14 @@
 package org.powernukkitx.simpleworldedit.commands;
 
-import cn.nukkit.Player;
-import cn.nukkit.command.CommandSender;
-import cn.nukkit.command.PluginCommand;
-import cn.nukkit.command.data.CommandParameter;
-import cn.nukkit.command.tree.ParamList;
-import cn.nukkit.command.utils.CommandLogger;
-import cn.nukkit.level.Level;
-import cn.nukkit.level.format.IChunk;
-import cn.nukkit.registry.Registries;
+import org.powernukkitx.Player;
+import org.powernukkitx.command.CommandSender;
+import org.powernukkitx.command.PluginCommand;
+import org.powernukkitx.command.data.CommandParameter;
+import org.powernukkitx.command.tree.ParamList;
+import org.powernukkitx.command.utils.CommandLogger;
+import org.powernukkitx.level.Level;
+import org.powernukkitx.level.format.IChunk;
+import org.powernukkitx.registry.Registries;
 import it.unimi.dsi.fastutil.objects.ObjectArraySet;
 import org.powernukkitx.simpleworldedit.SimpleWorldEdit;
 import org.powernukkitx.simpleworldedit.manager.SWEPlayer;
