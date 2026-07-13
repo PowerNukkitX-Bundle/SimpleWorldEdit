@@ -30,7 +30,7 @@ public class CopyCommand extends PluginCommand<SimpleWorldEdit> {
                 int maxX = Math.max(selection.getFirst().getX(), selection.getSecond().getX());
                 int maxY = Math.max(selection.getFirst().getY(), selection.getSecond().getY());
                 int maxZ = Math.max(selection.getFirst().getZ(), selection.getSecond().getZ());
-                Structure structure = Structure.create(p.getLevel(), minX, minY, minZ, (maxX-minX), (maxY-minY), (maxZ-minZ));
+                Structure structure = Structure.create(p.getLevel(), minX, minY, minZ, (maxX - minX) + 1, (maxY - minY) + 1, (maxZ - minZ) + 1);
                 ClipboardEntry entry = new ClipboardEntry(structure);
                 player.getClipboard().add(entry);
                 sender.sendMessage("§dCopied selection to your clipboard.");
