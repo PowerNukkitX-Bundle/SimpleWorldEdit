@@ -19,6 +19,8 @@ public class CommandAliasListener implements Listener {
             case "//2",
                  "//pos2",
                  "/second"-> "pos second";
+            case "//copy" -> "copy";
+            case "//paste" -> "paste";
             default -> null;
         };
         if(command != null) {
