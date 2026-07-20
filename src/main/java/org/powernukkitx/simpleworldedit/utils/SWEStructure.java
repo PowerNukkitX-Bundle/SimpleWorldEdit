@@ -1,11 +1,11 @@
 package org.powernukkitx.simpleworldedit.utils;
 
+import org.cloudburstmc.protocol.bedrock.data.payload.structure.Rotation;
 import org.powernukkitx.block.BlockState;
 import org.powernukkitx.level.structure.Structure;
 import org.powernukkitx.math.Vector3;
 import org.powernukkitx.nbt.tag.CompoundTag;
 import org.powernukkitx.utils.StructureRotationUtil;
-import org.cloudburstmc.protocol.bedrock.data.structure.Rotation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
