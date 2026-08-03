@@ -132,7 +132,7 @@ public class ClipboardEntry {
 
         for (var entry : structure.getBlockEntities().entrySet()) {
             Vector3 pos = entry.getKey();
-            CompoundTag nbt = entry.getValue();
+            CompoundTag nbt = entry.getValue().copy();
 
             double relX = pos.x - cx;
             double relZ = pos.z - cz;
@@ -145,6 +145,22 @@ public class ClipboardEntry {
             int ny = (int) pos.y;
 
             if (nx >= 0 && nx < newSizeX && nz >= 0 && nz < newSizeZ) {
+                CompoundTag blockEntityData = nbt.getCompound("block_entity_data");
+                blockEntityData.putInt("x", nx);
+                blockEntityData.putInt("y", ny);
+                blockEntityData.putInt("z", nz);
+
+                if (blockEntityData.contains("pairx") && blockEntityData.contains("pairz")) {
+                    double pairRelX = blockEntityData.getInt("pairx") - structure.getX() - cx;
+                    double pairRelZ = blockEntityData.getInt("pairz") - structure.getZ() - cz;
+
+                    double pairRx = pairRelX * cos - pairRelZ * sin;
+                    double pairRz = pairRelX * sin + pairRelZ * cos;
+
+                    blockEntityData.putInt("pairx", (int) Math.round(pairRx - minRX));
+                    blockEntityData.putInt("pairz", (int) Math.round(pairRz - minRZ));
+                }
+
                 rotatedBlockEntities.put(new Vector3(nx, ny, nz), nbt);
             }
         }

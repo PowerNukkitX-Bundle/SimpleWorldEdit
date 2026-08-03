@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.powernukkitx</groupId>
     <artifactId>SimpleWorldEdit</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -88,12 +88,6 @@
             <groupId>org.powernukkitx</groupId>
             <artifactId>server</artifactId>
             <version>nightly-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.powernukkitx.protocol</groupId>
-            <artifactId>bedrock-connection</artifactId>
-            <version>3.0.0.Beta7-Debug-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

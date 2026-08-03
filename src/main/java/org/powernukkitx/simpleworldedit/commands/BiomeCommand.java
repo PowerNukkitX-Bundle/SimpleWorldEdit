@@ -1,5 +1,6 @@
 package org.powernukkitx.simpleworldedit.commands;
 
+import org.cloudburstmc.protocol.bedrock.data.command.CommandParamType;
 import org.powernukkitx.Player;
 import org.powernukkitx.command.CommandSender;
 import org.powernukkitx.command.PluginCommand;
@@ -35,7 +36,7 @@ public class BiomeCommand extends PluginCommand<SimpleWorldEdit> {
         Arrays.sort(biomeNames);
         this.commandParameters.put("default", new CommandParameter[]{
                 biomeNames.length == 0
-                        ? CommandParameter.newType("biome", false, org.cloudburstmc.protocol.bedrock.data.command.CommandParamType.RAW_TEXT)
+                        ? CommandParameter.newType("biome", false, CommandParamType.RAW_TEXT)
                         : CommandParameter.newEnum("biome", false, biomeNames)
         });
         this.enableParamTree();
