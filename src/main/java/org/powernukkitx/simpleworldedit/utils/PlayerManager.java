@@ -15,12 +15,6 @@ public class PlayerManager implements Listener {
     protected final static HashMap<Player, SWEPlayer> PLAYERS = new HashMap<>();
 
     @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-        PLAYERS.put(player, new SWEPlayer(player));
-    }
-
-    @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
         PLAYERS.remove(event.getPlayer());
     }
@@ -33,7 +27,7 @@ public class PlayerManager implements Listener {
     }
 
     public static SWEPlayer get(Player player) {
-        return PLAYERS.get(player);
+        return PLAYERS.computeIfAbsent(player, SWEPlayer::new);
     }
 
 }
